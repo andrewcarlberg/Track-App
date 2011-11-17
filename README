@@ -1,8 +1,8 @@
 The project is an android app I am workin on to do the following to help track racers:
 
-<ul>
-<li>Calculate gear-inches
-<li>Pursuit schedules
-<li>stopwatch
-<li>spilts to desired schedule
-</ul>
+Calculate gear-inches
+Pursuit schedules
+stopwatch
+spilts to desired schedule
+cadence information based on gear and speed
+saving personal bests
