@@ -19,8 +19,8 @@
       	
 		    <ImageButton
 	            android:id="@+id/Scheduler_Button"
-	            android:layout_width="120px"
-	            android:layout_height="120px"
+	            android:layout_width="110px"
+	            android:layout_height="110px"
 	            android:layout_weight="1"
 	            android:padding="0px"
 	            android:scaleType="fitCenter"
@@ -29,8 +29,8 @@
 	            android:background="@null"/>
 	        <ImageButton
 	            android:id="@+id/Scheduler_Button"
-	            android:layout_width="120px"
-	            android:layout_height="120px"
+	            android:layout_width="110px"
+	            android:layout_height="110px"
 	            android:layout_weight="1"
 	            android:padding="0px"
 	            android:scaleType="fitCenter"
@@ -39,8 +39,8 @@
 	            android:background="@null"/>
 	        <ImageButton
 	            android:id="@+id/Scheduler_Button"
-	            android:layout_width="120px"
-	            android:layout_height="120px"
+	            android:layout_width="110px"
+	            android:layout_height="110px"
 	            android:layout_weight="1"	            
 	            android:padding="0px"
 	            android:scaleType="fitCenter"
@@ -94,8 +94,8 @@
       	
 		    <ImageButton
 	            android:id="@+id/Scheduler_Button"
-	            android:layout_width="120px"
-	            android:layout_height="120px"
+	            android:layout_width="110px"
+	            android:layout_height="110px"
 	            android:layout_weight="1"
 	            android:padding="0px"
 	            android:scaleType="fitCenter"
@@ -104,8 +104,8 @@
 	            android:background="@null"/>
 	        <ImageButton
 	            android:id="@+id/Scheduler_Button"
-	            android:layout_width="120px"
-	            android:layout_height="120px"
+	            android:layout_width="110px"
+	            android:layout_height="110px"
 	            android:layout_weight="1"
 	            android:padding="0px"
 	            android:scaleType="fitCenter"
@@ -114,8 +114,8 @@
 	            android:background="@null"/>
 	        <ImageButton
 	            android:id="@+id/Scheduler_Button"
-	            android:layout_width="120px"
-	            android:layout_height="120px"
+	            android:layout_width="110px"
+	            android:layout_height="110px"
 	            android:layout_weight="1"	            
 	            android:padding="0px"
 	            android:scaleType="fitCenter"
