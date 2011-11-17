@@ -7,23 +7,154 @@
     android:paddingLeft="10px" 
     android:paddingRight="10px">
 
+    <TableRow android:padding="10px"/>
+    <!-- Row one of menu icons -->
     <TableRow
-        android:paddingTop="20px" >
-
-        <ImageButton
-            android:id="@+id/Scheduler_Button"
-            android:layout_width="125px"
-            android:layout_height="125px"
-            android:padding="20px"
-            android:scaleType="fitCenter"
-            android:src="@drawable/scheduler" />
-
+        android:padding="1px" >
+		<LinearLayout 
+		android:orientation="horizontal"
+      	android:layout_width="fill_parent"
+      	android:layout_height="fill_parent"
+      	android:layout_weight="1">
+      	
+		    <ImageButton
+	            android:id="@+id/Scheduler_Button"
+	            android:layout_width="120px"
+	            android:layout_height="120px"
+	            android:layout_weight="1"
+	            android:padding="0px"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/scheduler" 
+	            android:gravity="center_horizontal"
+	            android:background="@null"/>
+	        <ImageButton
+	            android:id="@+id/Scheduler_Button"
+	            android:layout_width="120px"
+	            android:layout_height="120px"
+	            android:layout_weight="1"
+	            android:padding="0px"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/scheduler" 
+	            android:gravity="center_horizontal"
+	            android:background="@null"/>
+	        <ImageButton
+	            android:id="@+id/Scheduler_Button"
+	            android:layout_width="120px"
+	            android:layout_height="120px"
+	            android:layout_weight="1"	            
+	            android:padding="0px"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/scheduler" 
+	            android:gravity="center_horizontal"
+	            android:background="@null"/>
+		</LinearLayout>
     </TableRow>
-
+	<TableRow
+        android:padding="1px">
+		<LinearLayout
+		android:orientation="horizontal"
+      	android:layout_width="fill_parent"
+      	android:layout_height="fill_parent"
+      	android:layout_weight="1" >
+		    <TextView 
+		        android:id="@+id/schedular_text"
+  				android:layout_width="wrap_content"
+  				android:layout_height="fill_parent"
+  				android:layout_weight="1"
+  				android:gravity="center"
+		        android:text="@string/scheduler"
+		        />
+		    <TextView 
+		        android:id="@+id/textview"
+  				android:layout_width="wrap_content"
+  				android:layout_height="fill_parent"
+  				android:layout_weight="1"
+  				android:gravity="center"
+		        android:text="@string/scheduler"/>
+		    <TextView 
+		        android:id="@+id/textview"
+  				android:layout_width="wrap_content"
+  				android:layout_height="fill_parent"
+  				android:layout_weight="1"
+  				android:gravity="center"
+		        android:text="@string/scheduler"/>
+		</LinearLayout>
+  
+    </TableRow>
+    
+	<!-- Row two of menu icons -->   
+	<TableRow android:padding="10px"/>
     <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:padding="1px" >
+		<LinearLayout 
+		android:orientation="horizontal"
+      	android:layout_width="fill_parent"
+      	android:layout_height="fill_parent"
+      	android:layout_weight="1">
+      	
+		    <ImageButton
+	            android:id="@+id/Scheduler_Button"
+	            android:layout_width="120px"
+	            android:layout_height="120px"
+	            android:layout_weight="1"
+	            android:padding="0px"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/scheduler" 
+	            android:gravity="center_horizontal"
+	            android:background="@null"/>
+	        <ImageButton
+	            android:id="@+id/Scheduler_Button"
+	            android:layout_width="120px"
+	            android:layout_height="120px"
+	            android:layout_weight="1"
+	            android:padding="0px"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/scheduler" 
+	            android:gravity="center_horizontal"
+	            android:background="@null"/>
+	        <ImageButton
+	            android:id="@+id/Scheduler_Button"
+	            android:layout_width="120px"
+	            android:layout_height="120px"
+	            android:layout_weight="1"	            
+	            android:padding="0px"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/scheduler" 
+	            android:gravity="center_horizontal"
+	            android:background="@null"/>
+		</LinearLayout>
     </TableRow>
-        
+   	<TableRow
+        android:padding="1px">
+		<LinearLayout
+		android:orientation="horizontal"
+      	android:layout_width="fill_parent"
+      	android:layout_height="fill_parent"
+      	android:layout_weight="1" >
+		    <TextView 
+		        android:id="@+id/schedular_text"
+  				android:layout_width="wrap_content"
+  				android:layout_height="fill_parent"
+  				android:layout_weight="1"
+  				android:gravity="center"
+		        android:text="@string/scheduler"
+		        />
+		    <TextView 
+		        android:id="@+id/textview"
+  				android:layout_width="wrap_content"
+  				android:layout_height="fill_parent"
+  				android:layout_weight="1"
+  				android:gravity="center"
+		        android:text="@string/scheduler"/>
+		    <TextView 
+		        android:id="@+id/textview"
+  				android:layout_width="wrap_content"
+  				android:layout_height="fill_parent"
+  				android:layout_weight="1"
+  				android:gravity="center"
+		        android:text="@string/scheduler"/>
+		</LinearLayout>
+  
+    </TableRow>
+         
 </TableLayout>

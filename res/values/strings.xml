@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, TrackAppActivity!</string>
     <string name="app_name">Velodrome Companion</string>
+    <string name="scheduler">Pursuit Schedule</string>
 
 </resources>
