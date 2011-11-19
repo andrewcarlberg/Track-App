@@ -18,7 +18,7 @@
       	android:layout_weight="1">
       	
 		    <ImageButton
-	            android:id="@+id/Scheduler_Button"
+	            android:id="@+id/Gear_Info_Button"
 	            android:layout_width="110px"
 	            android:layout_height="110px"
 	            android:layout_weight="1"
@@ -28,7 +28,7 @@
 	            android:gravity="center_horizontal"
 	            android:background="@null"/>
 	        <ImageButton
-	            android:id="@+id/Scheduler_Button"
+	            android:id="@+id/Gear_Comparison_Button"
 	            android:layout_width="110px"
 	            android:layout_height="110px"
 	            android:layout_weight="1"
@@ -38,7 +38,7 @@
 	            android:gravity="center_horizontal"
 	            android:background="@null"/>
 	        <ImageButton
-	            android:id="@+id/Scheduler_Button"
+	            android:id="@+id/History_Button"
 	            android:layout_width="110px"
 	            android:layout_height="110px"
 	            android:layout_weight="1"	            
@@ -56,28 +56,32 @@
       	android:layout_width="fill_parent"
       	android:layout_height="fill_parent"
       	android:layout_weight="1" >
-		    <TextView 
-		        android:id="@+id/schedular_text"
-  				android:layout_width="wrap_content"
-  				android:layout_height="fill_parent"
-  				android:layout_weight="1"
-  				android:gravity="center"
-		        android:text="@string/scheduler"
+
+		    <TextView
+		        android:id="@+id/Gear_Info_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:text="@string/Gear_Info" 
 		        />
-		    <TextView 
-		        android:id="@+id/textview"
-  				android:layout_width="wrap_content"
-  				android:layout_height="fill_parent"
-  				android:layout_weight="1"
-  				android:gravity="center"
-		        android:text="@string/scheduler"/>
-		    <TextView 
-		        android:id="@+id/textview"
-  				android:layout_width="wrap_content"
-  				android:layout_height="fill_parent"
-  				android:layout_weight="1"
-  				android:gravity="center"
-		        android:text="@string/scheduler"/>
+
+		    <TextView
+		        android:id="@+id/Gear_Comparison_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:text="@string/Gear_Comparison" />
+
+		    <TextView
+		        android:id="@+id/History_text"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2"
+		        android:gravity="center"
+		        android:text="@string/History" />
+
 		</LinearLayout>
   
     </TableRow>
@@ -93,7 +97,7 @@
       	android:layout_weight="1">
       	
 		    <ImageButton
-	            android:id="@+id/Scheduler_Button"
+	            android:id="@+id/Scheduler_Builder_Button"
 	            android:layout_width="110px"
 	            android:layout_height="110px"
 	            android:layout_weight="1"
@@ -103,7 +107,7 @@
 	            android:gravity="center_horizontal"
 	            android:background="@null"/>
 	        <ImageButton
-	            android:id="@+id/Scheduler_Button"
+	            android:id="@+id/Scheduler_Custom_Button"
 	            android:layout_width="110px"
 	            android:layout_height="110px"
 	            android:layout_weight="1"
@@ -113,7 +117,7 @@
 	            android:gravity="center_horizontal"
 	            android:background="@null"/>
 	        <ImageButton
-	            android:id="@+id/Scheduler_Button"
+	            android:id="@+id/Timer_Button"
 	            android:layout_width="110px"
 	            android:layout_height="110px"
 	            android:layout_weight="1"	            
@@ -131,28 +135,28 @@
       	android:layout_width="fill_parent"
       	android:layout_height="fill_parent"
       	android:layout_weight="1" >
+
+		    <TextView
+		        android:id="@+id/Schedular_Builder_text"
+		        android:layout_width="104dp"
+		        android:layout_height="fill_parent"
+		        android:gravity="center"
+		        android:text="@string/Scheduler_Builder" />
+
+		    <TextView
+		        android:id="@+id/Schedular_Custom_text"
+		        android:layout_width="100dp"
+		        android:layout_height="fill_parent"
+		        android:gravity="center"
+		        android:text="@string/Scheduler_Custom" />
+
 		    <TextView 
-		        android:id="@+id/schedular_text"
+		        android:id="@+id/Timer_text"
   				android:layout_width="wrap_content"
   				android:layout_height="fill_parent"
-  				android:layout_weight="1"
+  				android:layout_weight=".001"
   				android:gravity="center"
-		        android:text="@string/scheduler"
-		        />
-		    <TextView 
-		        android:id="@+id/textview"
-  				android:layout_width="wrap_content"
-  				android:layout_height="fill_parent"
-  				android:layout_weight="1"
-  				android:gravity="center"
-		        android:text="@string/scheduler"/>
-		    <TextView 
-		        android:id="@+id/textview"
-  				android:layout_width="wrap_content"
-  				android:layout_height="fill_parent"
-  				android:layout_weight="1"
-  				android:gravity="center"
-		        android:text="@string/scheduler"/>
+		        android:text="@string/Timer"/>
 		</LinearLayout>
   
     </TableRow>

@@ -3,6 +3,11 @@
 
     <string name="hello">Hello World, TrackAppActivity!</string>
     <string name="app_name">Velodrome Companion</string>
-    <string name="scheduler">Pursuit Schedule</string>
+    <string name="Gear_Info">Gear\nInformation</string>
+    <string name="Gear_Comparison">Gear\nComparison</string>
+    <string name="History">History</string>
+    <string name="Scheduler_Builder">Pursuit Schedule Creator</string>
+    <string name="Scheduler_Custom">Pursuit Schedule Custom</string>
+    <string name="Timer">Timer</string>
 
 </resources>

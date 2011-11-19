@@ -18,16 +18,32 @@ public final class R {
         public static final int scheduler=0x7f020001;
     }
     public static final class id {
-        public static final int Scheduler_Button=0x7f060000;
-        public static final int schedular_text=0x7f060001;
-        public static final int textview=0x7f060002;
+        public static final int Front_Ring_Picker=0x7f060000;
+        public static final int Gear_Comparison_Button=0x7f060002;
+        public static final int Gear_Comparison_text=0x7f060005;
+        public static final int Gear_Info_Button=0x7f060001;
+        public static final int Gear_Info_text=0x7f060004;
+        public static final int History_Button=0x7f060003;
+        public static final int History_text=0x7f060006;
+        public static final int Schedular_Builder_text=0x7f06000a;
+        public static final int Schedular_Custom_text=0x7f06000b;
+        public static final int Scheduler_Builder_Button=0x7f060007;
+        public static final int Scheduler_Custom_Button=0x7f060008;
+        public static final int Timer_Button=0x7f060009;
+        public static final int Timer_text=0x7f06000c;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
+        public static final int gear_information=0x7f030000;
+        public static final int main=0x7f030001;
     }
     public static final class string {
+        public static final int Gear_Comparison=0x7f050003;
+        public static final int Gear_Info=0x7f050002;
+        public static final int History=0x7f050004;
+        public static final int Scheduler_Builder=0x7f050005;
+        public static final int Scheduler_Custom=0x7f050006;
+        public static final int Timer=0x7f050007;
         public static final int app_name=0x7f050001;
         public static final int hello=0x7f050000;
-        public static final int scheduler=0x7f050002;
     }
 }
