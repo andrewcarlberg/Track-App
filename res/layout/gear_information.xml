@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10px" 
+    android:paddingRight="10px">
+
+    <TableRow android:padding="10px"/>
+	<TableRow android:gravity="center">
+	    <NumberPicker
+	        android:id="@+id/Front_Ring_Picker"
+	        />
+	    
+	</TableRow>
+         
+</TableLayout>
