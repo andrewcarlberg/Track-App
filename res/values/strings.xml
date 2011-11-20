@@ -9,5 +9,8 @@
     <string name="Scheduler_Builder">Pursuit Schedule Creator</string>
     <string name="Scheduler_Custom">Pursuit Schedule Custom</string>
     <string name="Timer">Timer</string>
+    <string name="X">X</string>
+    <string name="GearInchLabel">Gear Inches: </string>
+    <string name="Gear_Inch_Default">92.5</string>
 
 </resources>

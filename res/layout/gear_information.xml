@@ -8,10 +8,38 @@
 
     <TableRow android:padding="10px"/>
 	<TableRow android:gravity="center">
-	    <NumberPicker
-	        android:id="@+id/Front_Ring_Picker"
-	        />
+		<com.TrackApp.NumberPicker
+		    android:id="@+id/FrontRing"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+		</com.TrackApp.NumberPicker>
+		<TextView
+		    android:text="@string/X">
+		</TextView>
+		<com.TrackApp.NumberPicker
+		    android:id="@+id/RearCog"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+		</com.TrackApp.NumberPicker>
 	    
 	</TableRow>
+	<TableRow>
+	    <TextView
+	        android:id="@+id/GearInchlabel"
+	        android:text="@string/GearInchLabel">
+	    </TextView>
+	    <TextView
+		    android:id="@+id/Gear_Inch"
+		    android:text="@string/Gear_Inch_Default"/>
+	</TableRow>
+		
+
+		<SeekBar
+		    android:id="@+id/CadenceBar"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="10px" 
+		    android:layout_gravity="center"/>
+
          
 </TableLayout>
