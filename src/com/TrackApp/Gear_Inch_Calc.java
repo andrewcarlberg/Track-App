@@ -11,6 +11,8 @@ public class Gear_Inch_Calc{
 	protected static Double Distance_Traveled;
 	private double KM_Factor = 0.62137;
 	
+	//Constructor:  Sets values of the ring and cog and 
+	//then calculates the distance and the inches
 	Gear_Inch_Calc(int frontRing, int cog)
 	{
 		
@@ -20,39 +22,45 @@ public class Gear_Inch_Calc{
 		Calc_distance();
 	}
 
-	
+	//Calculates gear inches based on Effective wheel size
 	private void Calc_inches() {
 		// TODO Auto-generated method stub
 		Gear_Inches = round((double)FrontRing/(double)Cog * Effective_wheel_size,2);
 	}
 	
+	//returns gear inches
 	public double getGearInches()
 	{
 		return Gear_Inches;
 	}
 	
+	//calculates the rollout of a bike in metric
 	private void Calc_distance()
 	{
 		Distance_Traveled = round(Gear_Inches*Math.PI*0.0254,2);
 	}
 	
+	//returns rollout
 	public double getDistanceTraveled()
 	{
 		return Distance_Traveled;
 	}
 	
+	//Calculates rollout in English units
 	private double Calc_distance_English()
 	{
 		Distance_Traveled = Gear_Inches*Math.PI;
 		return Distance_Traveled;
 	}
 	
+	//rounding function  Thanks StackOverflow!
 	private static double round(double d, int decimalPlace) {
 	    BigDecimal bd = new BigDecimal(d);
 	    bd = bd.setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
 	    return bd.doubleValue();
 	}
 	
+	//calculates the time to complete a distance in seconds
 	protected double Time_To_Complete(int cadence, double distance)
 	{
 		if (cadence == 0)
@@ -61,6 +69,7 @@ public class Gear_Inch_Calc{
 		return round(time,2);
 	}
 
+	//returns seconds into a Pretty Print
 	public String Pretty_Print(double time_in_seconds)
 	{
 		//mm:ss:th
@@ -83,11 +92,13 @@ public class Gear_Inch_Calc{
 		
 	}
 	
+	//calcs KPH speed
 	protected double KPH_Speed(int cadence)
 	{
 		return round(Calc_distance_English()*((double)cadence)*60.0/12.0/5280.0/KM_Factor,2);
 	}
 	
+	//calcs a MPH Speed
 	protected double MPH_Speed(int cadence)
 	{
 		return round(Calc_distance_English()*((double)cadence)*60.0/12.0/5280.0,2);

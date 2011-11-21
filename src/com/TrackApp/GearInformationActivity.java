@@ -5,25 +5,35 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
-import com.TrackApp.NumberPicker;
-
-import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.TrackApp.NumberPicker;
 
 public class GearInformationActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gear_information);
+		
+		//Set up of Front Ring Select0r
 		final NumberPicker frontRing = (NumberPicker)findViewById(R.id.FrontRing);
-		final NumberPicker rearCog = (NumberPicker)findViewById(R.id.RearCog);
 		frontRing.setRange(30, 65);
 		frontRing.setCurrent(48);
+		
+		//Set up of Cog Selector
+		final NumberPicker rearCog = (NumberPicker)findViewById(R.id.RearCog);
 		rearCog.setRange(10,23);
 		rearCog.setCurrent(14);	
-		final TextView Gear_inches = (TextView)findViewById(R.id.Gear_Inch);
+		
+		
+		//Cadence Bar setup
 		final SeekBar cadence_select= (SeekBar)findViewById(R.id.CadenceBar);
+		cadence_select.setMax(200);
+		cadence_select.setProgress(90);
+		
+		//Text views that will change based on input
+		final TextView Gear_inches = (TextView)findViewById(R.id.Gear_Inch);
 		final TextView cadence = (TextView)findViewById(R.id.Cadence);
 		final TextView rollout = (TextView)findViewById(R.id.Rollout);
 		final TextView speed = (TextView)findViewById(R.id.Speed);
@@ -60,52 +70,66 @@ public class GearInformationActivity extends Activity{
 		Distance.add(4000);
 		
 		
-		cadence_select.setMax(200);
-		cadence_select.setProgress(90);
+		//Listener for change to Front Ring Selector
 		frontRing.setOnChangeListener(new NumberPicker.OnChangedListener() {
 
 			public void onChanged(NumberPicker picker, int oldVal, int newVal) {
+				//Change Gear Inches
 				Gear_Inch_Calc from_Front = new Gear_Inch_Calc(newVal,rearCog.getCurrent());			
 				CharSequence x;
 				Double y= from_Front.getGearInches();
 				x = (CharSequence) y.toString();
 				Gear_inches.setText(x);
+				
+				//Change Rollout
 				x = (CharSequence)((Double)from_Front.getDistanceTraveled()).toString();
 				rollout.setText(x);
+				
+				//Change Speed
 				double KPH_speed = from_Front.KPH_Speed(cadence_select.getProgress());
 				x  =(CharSequence)((Double)KPH_speed).toString();
 				speed.setText(x);
+				
+				//Update Times
 				Update_Times(Time_TextViews, Distance, from_Front, cadence_select.getProgress());
 
 			}
 		});
 		
+		//Listener for change to Cog Selector
 		rearCog.setOnChangeListener(new NumberPicker.OnChangedListener() {
 
 			public void onChanged(NumberPicker picker, int oldVal, int newVal) {
-				
+				//Change Gear Inches
 				Gear_Inch_Calc from_Rear = new Gear_Inch_Calc(frontRing.getCurrent(),newVal);
 				CharSequence x;
 				Double y= from_Rear.getGearInches();
 				x = (CharSequence) y.toString();
 				Gear_inches.setText(x);
+				
+				//Change Rollout
 				x = (CharSequence)((Double)from_Rear.getDistanceTraveled()).toString();
 				rollout.setText(x);
+				
+				//Change Speed
 				double KPH_speed = from_Rear.KPH_Speed(cadence_select.getProgress());
 				x  =(CharSequence)((Double)KPH_speed).toString();
 				speed.setText(x);
+				
+				//Update Distance Times
 				Update_Times(Time_TextViews, Distance, from_Rear, cadence_select.getProgress());
 				
 			}
 		});
 		
+		//Lister of cadence bars
 		cadence_select.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-			
+			//Unused function
 			public void onStopTrackingTouch(SeekBar seekBar) {
 				// TODO Auto-generated method stub
 				
 			}
-			
+			//Unused Function
 			public void onStartTrackingTouch(SeekBar seekBar) {
 				// TODO Auto-generated method stub
 				
@@ -113,11 +137,16 @@ public class GearInformationActivity extends Activity{
 			
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
+				//change Cadence label
 				Gear_Inch_Calc gear = new Gear_Inch_Calc(frontRing.getCurrent(),rearCog.getCurrent());
 				CharSequence x = (CharSequence)((Integer)progress).toString();
 				cadence.setText(x);
+				
+				//Change Speed
 				x = (CharSequence)((Double)gear.KPH_Speed(progress)).toString();
 				speed.setText(x);
+				
+				//Update Times
 				Update_Times(Time_TextViews, Distance, gear, progress);
 				
 			}
@@ -126,6 +155,8 @@ public class GearInformationActivity extends Activity{
 				
 		
 	}
+	
+	//Abstraction to update times
 	private void Update_Times(List<TextView> views, List<Integer> Distances, Gear_Inch_Calc gear, int cadence)
 	{
 		for(int i=0; i<views.size(); i++)
