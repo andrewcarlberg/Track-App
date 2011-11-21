@@ -55,6 +55,8 @@ public class Gear_Inch_Calc{
 	
 	protected double Time_To_Complete(int cadence, double distance)
 	{
+		if (cadence == 0)
+			cadence++;
 		double time = distance/(KPH_Speed(cadence)*1000.0/3600.0);
 		return round(time,2);
 	}
