@@ -12,5 +12,33 @@
     <string name="X">X</string>
     <string name="GearInchLabel">Gear Inches: </string>
     <string name="Gear_Inch_Default">92.5</string>
-
+    <string name="CadenceLabel">Cadence: </string>
+    <string name="Cadence_Default">90</string>
+    <string name="Rollout_Label">Rollout:</string>
+    <string name="rollout_distance">7.38</string>
+	<string name="meter_units">meters</string>        
+	<string name="Speed_text_Label">Speed:</string>
+    <string name="Speed_default">39.89</string>
+	<string name="KPH_units">KPH</string>   
+	
+	<string name="Distance_Heading">Distance (meters)</string>
+	<string name="Time_Heading">Time (mm:ss.th)</string>
+	<string name="two_hundred_Label">200m</string>
+	<string name="two_fifty_Label">250m</string>
+	<string name="three_thirdy_three_m_Label">333m</string>
+	<string name="four_hundred_m_Label">400m</string>
+	<string name="five_hundred_m_Label">500m</string>
+	<string name="one_k_Label">1000m</string>
+	<string name="two_k_Label">2000m</string>
+	<string name="three_k_Label">3000m</string>
+	<string name="four_k_Label">4000m</string>
+	<string name="two_hundred_Time">00:18.05</string>
+	<string name="two_fifty_m_Time">00:22.56</string>
+	<string name="three_thirdy_three_m_Time">00:30.05</string>
+	<string name="four_hundred_m_Time">00:36.10</string>
+	<string name="five_hundred_m_Time">00:45.13</string>
+	<string name="one_k_Time">1:30.26</string>
+	<string name="two_k_Time">3:00.52</string>
+	<string name="three_k_Time">4:30.78</string>
+	<string name="four_k_Time">6:01.04</string>
 </resources>

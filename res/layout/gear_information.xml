@@ -14,7 +14,8 @@
 			android:layout_height="wrap_content" >
 		</com.TrackApp.NumberPicker>
 		<TextView
-		    android:text="@string/X">
+		    android:text="@string/X"
+		    android:layout_gravity="center">
 		</TextView>
 		<com.TrackApp.NumberPicker
 		    android:id="@+id/RearCog"
@@ -26,20 +27,196 @@
 	<TableRow>
 	    <TextView
 	        android:id="@+id/GearInchlabel"
-	        android:text="@string/GearInchLabel">
-	    </TextView>
+	        android:text="@string/GearInchLabel"/>
 	    <TextView
 		    android:id="@+id/Gear_Inch"
 		    android:text="@string/Gear_Inch_Default"/>
+	    <TextView
+	        android:layout_gravity="right"
+	        android:id="@+id/Rollout_Label_id"
+	        android:paddingLeft="10px"
+	        android:text="@string/Rollout_Label" />
+	    <TextView
+	        android:paddingLeft="5px"
+	        android:id="@+id/Rollout"
+	        android:text="@string/rollout_distance"/>
+	    <TextView
+	        android:paddingLeft="5px"
+	        android:id="@+id/Meter_Units"
+	        android:text="@string/meter_units"/>
+	        
 	</TableRow>
+	<SeekBar android:layout_width="fill_parent" android:id="@+id/CadenceBar" android:layout_height="wrap_content" android:layout_margin="10px"/>
+	<TableRow >
+	    <TextView
+	        android:id="@+id/Cadencelabel"
+	        android:text="@string/CadenceLabel"/>
+	    <TextView android:id="@+id/Cadence" android:text="@string/Cadence_Default"/> 
+
+	    <TextView
+	        android:id="@+id/Speed_Label"
+	        android:layout_gravity="right"
+	        android:paddingLeft="10px"
+	        android:text="@string/Speed_text_Label" />
+
+	    <TextView
+	        android:id="@+id/Speed"
+	        android:paddingLeft="5px"
+	        android:text="@string/Speed_default" />
+
+		<TextView
+		    android:id="@+id/KPH_Units"
+		    android:paddingLeft="5px"
+		    android:text="@string/KPH_units" />
+    </TableRow>
+
+    <TableRow android.padding="10px" >
+    </TableRow>
+
+
+
+	<TableLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:paddingLeft="10px" 
+	    android:paddingRight="10px"
+	    android:stretchColumns="*">
+	
+	    <TableRow android:padding="10px"/>
+		<TableRow
+		    android:layout_gravity="center">
+
+		    <TextView
+		        android:id="@+id/DistanceHeading"
+		        android:layout_gravity="left"
+		        android:text="@string/Distance_Heading" />
+		    <TextView 
+		        android:id="@+id/TimeHeading" 
+		        android:text="@string/Time_Heading"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
+		<!-- 200m -->
+		<TableRow
+		    android:layout_gravity="center">
+
+		    <TextView
+		        android:id="@+id/two_hundred_m_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/two_hundred_Label" />
+		    <TextView 
+		        android:id="@+id/twohundredtime" 
+		        android:text="@string/two_hundred_Time"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
+		<!-- 250m -->
+		<TableRow
+		    android:layout_gravity="center">
+
+		    <TextView
+		        android:id="@+id/two_fifty_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/two_fifty_Label" />
+		    <TextView 
+		        android:id="@+id/twofiftymtime" 
+		        android:text="@string/two_fifty_m_Time"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
+		<!-- 333.3m -->
+		<TableRow
+		    android:layout_gravity="center">
+
+		    <TextView
+		        android:id="@+id/three_thirdy_three_m_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/three_thirdy_three_m_Label" />
+		    <TextView 
+		        android:id="@+id/threethirdythreemtime" 
+		        android:text="@string/three_thirdy_three_m_Time"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
+		<!-- 400m -->
+		<TableRow
+		    android:layout_gravity="center">
+
+		    <TextView
+		        android:id="@+id/four_hundred_m_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/four_hundred_m_Label" />
+		    <TextView 
+		        android:id="@+id/fourhundredmtime" 
+		        android:text="@string/four_hundred_m_Time"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
+		<!-- 500m -->
+		<TableRow
+		    android:layout_gravity="center">
+		    <TextView
+		        android:id="@+id/five_hundred_m_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/five_hundred_m_Label" />
+		    <TextView 
+		        android:id="@+id/fivehundredmtime" 
+		        android:text="@string/five_hundred_m_Time"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
+		<!-- 1000m -->
+		<TableRow
+		    android:layout_gravity="center">
+		    <TextView
+		        android:id="@+id/one_k_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/one_k_Label" />
+		    <TextView 
+		        android:id="@+id/onektime" 
+		        android:text="@string/one_k_Time"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
+		<!-- 2000m -->
+		<TableRow
+		    android:layout_gravity="center">
+		    <TextView
+		        android:id="@+id/two_k_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/two_k_Label" />
+		    <TextView 
+		        android:id="@+id/twoktime" 
+		        android:text="@string/two_k_Time"
+		        android:layout_gravity="center"/>
+		</TableRow>
+		<!-- 3000m -->
+		<TableRow
+		    android:layout_gravity="center">
+		    <TextView
+		        android:id="@+id/three_k_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/three_k_Label" />
+		    <TextView 
+		        android:id="@+id/threektime" 
+		        android:text="@string/three_k_Time"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
+		<!-- 4000m -->
+		<TableRow
+		    android:layout_gravity="center">
+		    <TextView
+		        android:id="@+id/four_k_distance"
+		        android:layout_gravity="left"
+		        android:text="@string/four_k_Label" />
+		    <TextView 
+		        android:id="@+id/fourktime" 
+		        android:text="@string/four_k_Time"
+		        android:layout_gravity="center"/>
+
+		</TableRow>
 		
-
-		<SeekBar
-		    android:id="@+id/CadenceBar"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:layout_margin="10px" 
-		    android:layout_gravity="center"/>
-
-         
+	</TableLayout>
 </TableLayout>
