@@ -7,6 +7,8 @@
     android:paddingRight="10px">
 
     <TableRow android:padding="10px"/>
+    
+    <!-- Number Picker creation -->
 	<TableRow android:gravity="center">
 		<com.TrackApp.NumberPicker
 		    android:id="@+id/FrontRing"
@@ -24,6 +26,8 @@
 		</com.TrackApp.NumberPicker>
 	    
 	</TableRow>
+	
+	<!-- Gear Inches and Rollout label -->
 	<TableRow>
 	    <TextView
 	        android:id="@+id/GearInchlabel"
@@ -46,7 +50,10 @@
 	        android:text="@string/meter_units"/>
 	        
 	</TableRow>
+	<!-- Cadence select bar -->
 	<SeekBar android:layout_width="fill_parent" android:id="@+id/CadenceBar" android:layout_height="wrap_content" android:layout_margin="10px"/>
+	
+	<!-- Row with cadence and speed information -->
 	<TableRow >
 	    <TextView
 	        android:id="@+id/Cadencelabel"
