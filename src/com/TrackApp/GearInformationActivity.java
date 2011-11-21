@@ -1,5 +1,6 @@
 package com.TrackApp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -28,15 +29,36 @@ public class GearInformationActivity extends Activity{
 		final TextView speed = (TextView)findViewById(R.id.Speed);
 		
 		//Distance Times
+		final List<TextView> Time_TextViews = new ArrayList<TextView>();
+		final List<Integer> Distance = new ArrayList<Integer>();
 		final TextView twohm = (TextView)findViewById(R.id.twohundredtime);
+		Time_TextViews.add(twohm);
+		Distance.add(200);
 		final TextView twofiftym = (TextView)findViewById(R.id.twofiftymtime);
+		Time_TextViews.add(twofiftym);
+		Distance.add(250);
 		final TextView threethirdythreem = (TextView)findViewById(R.id.threethirdythreemtime);
+		Time_TextViews.add(threethirdythreem);
+		Distance.add(333);
 		final TextView fourhm = (TextView)findViewById(R.id.fourhundredmtime);
+		Time_TextViews.add(fourhm);
+		Distance.add(400);
 		final TextView fivehm = (TextView)findViewById(R.id.fivehundredmtime);
+		Time_TextViews.add(fivehm);
+		Distance.add(500);
 		final TextView onek = (TextView)findViewById(R.id.onektime);
+		Time_TextViews.add(onek);
+		Distance.add(1000);
 		final TextView twok = (TextView)findViewById(R.id.twoktime);
+		Time_TextViews.add(twok);
+		Distance.add(2000);
 		final TextView threek = (TextView)findViewById(R.id.threektime);
+		Time_TextViews.add(threek);
+		Distance.add(3000);
 		final TextView fourk = (TextView)findViewById(R.id.fourktime);
+		Time_TextViews.add(fourk);
+		Distance.add(4000);
+		
 		
 		cadence_select.setMax(200);
 		cadence_select.setProgress(90);
@@ -53,24 +75,8 @@ public class GearInformationActivity extends Activity{
 				double KPH_speed = from_Front.KPH_Speed(cadence_select.getProgress());
 				x  =(CharSequence)((Double)KPH_speed).toString();
 				speed.setText(x);
-				twohm.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 200)));
-				twofiftym.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 250)));
-				threethirdythreem.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 333)));
-				fourhm.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 400)));
-				fivehm.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 500)));
-				onek.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 1000)));
-				twok.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 2000)));
-				threek.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 3000)));
-				fourk.setText((CharSequence)from_Front.Pretty_Print(
-						from_Front.Time_To_Complete(cadence_select.getProgress(), 4000)));
+				Update_Times(Time_TextViews, Distance, from_Front, cadence_select.getProgress());
+
 			}
 		});
 		
@@ -88,25 +94,7 @@ public class GearInformationActivity extends Activity{
 				double KPH_speed = from_Rear.KPH_Speed(cadence_select.getProgress());
 				x  =(CharSequence)((Double)KPH_speed).toString();
 				speed.setText(x);
-				
-				twohm.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 200)));
-				twofiftym.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 250)));
-				threethirdythreem.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 333)));
-				fourhm.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 400)));
-				fivehm.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 500)));
-				onek.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 1000)));
-				twok.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 2000)));
-				threek.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 3000)));
-				fourk.setText((CharSequence)from_Rear.Pretty_Print(
-						from_Rear.Time_To_Complete(cadence_select.getProgress(), 4000)));
+				Update_Times(Time_TextViews, Distance, from_Rear, cadence_select.getProgress());
 				
 			}
 		});
@@ -130,25 +118,7 @@ public class GearInformationActivity extends Activity{
 				cadence.setText(x);
 				x = (CharSequence)((Double)gear.KPH_Speed(progress)).toString();
 				speed.setText(x);
-				
-				twohm.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 200)));
-				twofiftym.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 250)));
-				threethirdythreem.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 333)));
-				fourhm.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 400)));
-				fivehm.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 500)));
-				onek.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 1000)));
-				twok.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 2000)));
-				threek.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 3000)));
-				fourk.setText((CharSequence)gear.Pretty_Print(
-						gear.Time_To_Complete(progress, 4000)));
+				Update_Times(Time_TextViews, Distance, gear, progress);
 				
 			}
 		});
@@ -156,6 +126,17 @@ public class GearInformationActivity extends Activity{
 				
 		
 	}
+	private void Update_Times(List<TextView> views, List<Integer> Distances, Gear_Inch_Calc gear, int cadence)
+	{
+		for(int i=0; i<views.size(); i++)
+		{
+			views.get(i).setText((CharSequence) gear.Pretty_Print(
+					gear.Time_To_Complete(cadence, Distances.get(i))));
+		}
+
+	}
+	
+	
 
 }
 
