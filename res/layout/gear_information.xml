@@ -3,10 +3,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:paddingLeft="10px" 
-    android:paddingRight="10px">
+    android:paddingLeft="10dp" 
+    android:paddingRight="10dp">
 
-    <TableRow android:padding="10px"/>
+    <TableRow android:padding="10dp"/>
     
     <!-- Number Picker creation -->
 	<TableRow android:gravity="center">
@@ -38,46 +38,47 @@
 	    <TextView
 	        android:layout_gravity="right"
 	        android:id="@+id/Rollout_Label_id"
-	        android:paddingLeft="10px"
+	        android:paddingLeft="10dp"
 	        android:text="@string/Rollout_Label" />
 	    <TextView
-	        android:paddingLeft="5px"
+	        android:paddingLeft="5dp"
 	        android:id="@+id/Rollout"
 	        android:text="@string/rollout_distance"/>
 	    <TextView
-	        android:paddingLeft="5px"
+	        android:paddingLeft="5dp"
 	        android:id="@+id/Meter_Units"
 	        android:text="@string/meter_units"/>
 	        
 	</TableRow>
 	<!-- Cadence select bar -->
-	<SeekBar android:layout_width="fill_parent" android:id="@+id/CadenceBar" android:layout_height="wrap_content" android:layout_margin="10px"/>
+	<SeekBar android:layout_width="fill_parent" android:id="@+id/CadenceBar" android:layout_height="wrap_content" android:layout_margin="10dp"/>
 	
 	<!-- Row with cadence and speed information -->
 	<TableRow >
 	    <TextView
 	        android:id="@+id/Cadencelabel"
 	        android:text="@string/CadenceLabel"/>
-	    <TextView android:id="@+id/Cadence" android:text="@string/Cadence_Default"/> 
+	    <TextView android:id="@+id/Cadence" 
+	        android:text="@string/Cadence_Default"/> 
 
 	    <TextView
 	        android:id="@+id/Speed_Label"
 	        android:layout_gravity="right"
-	        android:paddingLeft="10px"
+	        android:paddingLeft="10dp"
 	        android:text="@string/Speed_text_Label" />
 
 	    <TextView
 	        android:id="@+id/Speed"
-	        android:paddingLeft="5px"
+	        android:paddingLeft="5dp"
 	        android:text="@string/Speed_default" />
 
 		<TextView
 		    android:id="@+id/KPH_Units"
-		    android:paddingLeft="5px"
+		    android:paddingLeft="5dp"
 		    android:text="@string/KPH_units" />
     </TableRow>
 
-    <TableRow android.padding="10px" >
+    <TableRow android.padding="10dp" >
     </TableRow>
 
 
@@ -86,11 +87,11 @@
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
 	    android:orientation="vertical"
-	    android:paddingLeft="10px" 
-	    android:paddingRight="10px"
+	    android:paddingLeft="10dp" 
+	    android:paddingRight="10dp"
 	    android:stretchColumns="*">
 	
-	    <TableRow android:padding="10px"/>
+	    <TableRow android:padding="10dp"/>
 		<TableRow
 		    android:layout_gravity="center">
 

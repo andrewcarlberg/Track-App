@@ -41,4 +41,7 @@
 	<string name="two_k_Time">3:00.52</string>
 	<string name="three_k_Time">4:30.78</string>
 	<string name="four_k_Time">6:01.04</string>
+	<string name="vs">vs</string>
+	<string name="rollout_one_distance">7.38</string>
+    <string name="rollout_two_distance">7.38</string>
 </resources>
