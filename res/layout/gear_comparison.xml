@@ -1,133 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:paddingLeft="10dp" 
-    android:paddingRight="10dp">
+    android:padding="10dp">
 
-    <TableRow android:padding="10dp"/>
-    
-    <!-- Number Picker creation -->
-	<TableRow android:gravity="center">
-		<com.TrackApp.NumberPicker
-		    android:id="@+id/FrontRing1"
-			android:layout_width="60dp"
-			android:layout_height="wrap_content" >
-		</com.TrackApp.NumberPicker>
-		<TextView
-		    android:text="@string/X"
-		    android:layout_gravity="center">
-		</TextView>
-		<com.TrackApp.NumberPicker
-		    android:id="@+id/RearCog1"
-			android:layout_width="60dp"
-			android:layout_height="wrap_content" >
-		</com.TrackApp.NumberPicker>
-		<TextView android:text="@string/vs"
-		    android:layout_gravity="center"
-		    android:padding="15dp"/>
-		    
-		<com.TrackApp.NumberPicker
-		    android:id="@+id/FrontRing2"
-			android:layout_width="60dp"
-			android:layout_height="wrap_content" >
-		</com.TrackApp.NumberPicker>
-		<TextView
-		    android:text="@string/X"
-		    android:layout_gravity="center">
-		</TextView>
-		<com.TrackApp.NumberPicker
-		    android:id="@+id/RearCog2"
-			android:layout_width="60dp"
-			android:layout_height="wrap_content" >
-		</com.TrackApp.NumberPicker>
+   <!-- Number Pickers -->
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="250dp"
+      android:layout_weight="1"
+      android:layout_gravity="center">
+
+	<com.TrackApp.NumberPicker
+		android:id="@+id/FrontRing1"
+		android:layout_width="60dp"
+		android:layout_height="wrap_content" >
+	</com.TrackApp.NumberPicker>
+	
+	<TextView
+	    android:text="@string/X"
+	    android:layout_gravity="center"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    >
+	</TextView>
+	
+	<com.TrackApp.NumberPicker
+	    android:id="@+id/RearCog1"
+		android:layout_width="60dp"
+		android:layout_height="wrap_content">
+	</com.TrackApp.NumberPicker>
+	
+	<TextView
+	    android:padding="10dp"
+	    android:text="@string/vs"
+	    android:layout_gravity="center"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"/>
 	    
-	</TableRow>
-
-	<TableLayout
-	    android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:orientation="vertical"
-		android:paddingLeft="5dp" 
-		android:paddingRight="5dp"
-		>	
-		
-		<SeekBar android:layout_width="fill_parent" 
-		    android:id="@+id/CadenceBar" 
-		    android:layout_height="wrap_content" 
-		    android:layout_margin="5dp"/>
-		
-		<TableRow>
-		    <TextView
-		        android:id="@+id/Cadencelabel"
-		        android:text="@string/CadenceLabel"/>
-		    <TextView android:id="@+id/Cadence" 
-		        android:text="@string/Cadence_Default"/> 
-		        
-		</TableRow>   
-		<TableRow 
-		    android:padding="5dp"/>
+	<com.TrackApp.NumberPicker
+		android:id="@+id/FrontRing2"
+		android:layout_width="60dp"
+		android:layout_height="wrap_content" >
+	</com.TrackApp.NumberPicker>
 	
-		<TableRow>
-			<TextView
-		        android:layout_gravity="left"
-		        android:id="@+id/Gear_inch_one_label"
-		        android:text="@string/GearInchLabel" />
-		    <TextView
-		        android:id="@+id/Gear_Inch_One"
-		        android:text="@string/Gear_Inch_Default"
-		        android:layout_gravity="left"
-		        android:paddingLeft="3dp"/>
+	<TextView
+	    android:text="@string/X"
+	    android:layout_gravity="center"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    >
+	</TextView>
 	
-			<TextView			    
-		        android:layout_gravity="right"
-		        android:id="@+id/Gear_inch_two_label"
-		        android:paddingLeft="20dp"
-		        android:text="@string/GearInchLabel" />
-		    <TextView
-		        android:paddingLeft="3dp"
-		        android:id="@+id/Gear_Inch_One"
-		        android:text="@string/Gear_Inch_Default"
-		        android:layout_gravity="right"/>
-
-		    </TableRow>
-		    
-		    
-		<TableRow>
-			<TextView
-		        android:layout_gravity="left"
-		        android:id="@+id/Rollout_one_Label_id"
-		        android:text="@string/Rollout_Label"/>
-		    <TextView
-		        android:id="@+id/Rollout_one"
-		        android:text="@string/rollout_one_distance"
-		        android:layout_gravity="left"/>
-		    <TextView
-
-		        android:paddingLeft="5dp"
-		        android:id="@+id/Meter_Units"
-		        android:text="@string/meter_units"
-		        android:layout_gravity="left"/>
-			
-			
-			<TextView
-			    
-		        android:layout_gravity="right"
-		        android:id="@+id/Rollout_two_Label_id"
-		        android:paddingLeft="5dp"
-		        android:text="@string/Rollout_Label" />
-		    <TextView
-		        android:paddingLeft="5dp"
-		        android:id="@+id/Rollout_two"
-		        android:text="@string/rollout_two_distance"
-		        android:layout_gravity="right"/>
-		    <TextView
-		        android:paddingLeft="5dp"
-		        android:id="@+id/Meter_Units"
-		        android:text="@string/meter_units"
-		        android:layout_gravity="left"/>
-		    </TableRow>
+	<com.TrackApp.NumberPicker
+	    android:id="@+id/RearCog2"
+		android:layout_width="60dp"
+		android:layout_height="wrap_content" >
+	</com.TrackApp.NumberPicker>
 	
-	</TableLayout>
-</TableLayout>
+  </LinearLayout>
+        
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1">
+    <TextView
+        android:id="@+id/GearInchOneLabel"
+        android:text="@string/GearInchLabel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/GearInchOne"
+        android:text="@string/Gear_Inch_Default"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_weight="1.5"/>
+    <TextView
+        android:id="@+id/GearInchTwoLabel"
+        android:text="@string/GearInchLabel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:layout_gravity="right"/>
+    <TextView
+        android:id="@+id/GearInchTwo"
+        android:text="@string/Gear_Inch_Default"
+        android:paddingLeft="5dp"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:layout_gravity="right"/>
+  </LinearLayout>
+
+</LinearLayout>
