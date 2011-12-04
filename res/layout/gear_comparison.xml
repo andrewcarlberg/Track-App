@@ -11,7 +11,7 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:layout_weight="1"
-      android:layout_gravity="center">
+      android:gravity="center">
 
 	<com.TrackApp.NumberPicker
 		android:id="@+id/FrontRing1"
@@ -68,35 +68,52 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_weight="1">
-    <TextView
-        android:id="@+id/GearInchOneLabel"
-        android:text="@string/GearInchLabel"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <TextView
-        android:id="@+id/GearInchOne"
-        android:text="@string/Gear_Inch_Default"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_weight="1.5"/>
-    <TextView
-        android:id="@+id/GearInchTwoLabel"
-        android:text="@string/GearInchLabel"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:paddingLeft="10dp"
-        android:layout_gravity="right"/>
-    <TextView
-        android:id="@+id/GearInchTwo"
-        android:text="@string/Gear_Inch_Default"
-        android:paddingLeft="5dp"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.5"
-        android:layout_gravity="right"/>
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1"
+    	android:gravity="left">
+    	
+	    <TextView
+	        android:id="@+id/GearInchOneLabel"
+	        android:text="@string/GearInchLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    <TextView
+	        android:id="@+id/GearInchOne"
+	        android:text="@string/Gear_Inch_Default"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left"
+	        android:paddingLeft="5dp"/>
+	        
+    	</LinearLayout>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1"
+    	android:paddingRight="10dp"
+    	android:gravity="right">
+    	
+	    <TextView
+	        android:id="@+id/GearInchTwoLabel"
+	        android:text="@string/GearInchLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="10dp"
+	        android:layout_gravity="right"/>
+	    <TextView
+	        android:id="@+id/GearInchTwo"
+	        android:text="@string/Gear_Inch_Default"
+	        android:paddingLeft="5dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"/>
+        
+        </LinearLayout>
     
     
   </LinearLayout>
@@ -106,37 +123,53 @@
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_weight="1">
-    <TextView
-        android:id="@+id/RolloutoneLabel"
-        android:text="@string/Rollout_Label"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <TextView
-        android:id="@+id/Rollout_one"
-        android:text="@string/rollout_distance"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_weight="1.5"/>
-    <TextView
-        android:id="@+id/RolloutTwoLabel"
-        android:text="@string/Rollout_Label"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:paddingLeft="10dp"
-        android:layout_gravity="right"/>
-    <TextView
-        android:id="@+id/Rollout_two"
-        android:text="@string/rollout_distance"
-        android:paddingLeft="5dp"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.5"
-        android:layout_gravity="right"/>
+    android:layout_weight="1"
+    android:gravity="left">
+    
+    <LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1">
+	    <TextView
+	        android:id="@+id/RolloutoneLabel"
+	        android:text="@string/Rollout_Label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	    <TextView
+	        android:id="@+id/Rollout_one"
+	        android:text="@string/rollout_distance"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="left"
+	        android:paddingLeft="5dp"/>
+	</LinearLayout>
+	
+	<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="right"
+    android:paddingRight="10dp">
+	    <TextView
+	        android:id="@+id/RolloutTwoLabel"
+	        android:text="@string/Rollout_Label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"/>
+	    <TextView
+	        android:id="@+id/Rollout_two"
+	        android:text="@string/rollout_distance"
+	        android:paddingLeft="5dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"/>
+  	</LinearLayout>
+  	
   </LinearLayout>
+  
   
   <!-- Cadence TextView -->
   <LinearLayout
@@ -176,7 +209,8 @@
       android:orientation="horizontal"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:layout_weight="1">
+      android:layout_weight="1"
+      android:padding="10dp">
 	<LinearLayout
 	    android:orientation="horizontal"
 	    android:layout_width="wrap_content"
@@ -208,7 +242,7 @@
 	    android:orientation="horizontal"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:layout_gravity="right"
+	    android:gravity="right"
 	    android:layout_weight="1">
 		
 		<TextView
@@ -233,4 +267,207 @@
 		</LinearLayout>
   </LinearLayout>
 
+  <!-- 200m Distances -->
+  <LinearLayout
+  	android:orientation="horizontal"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:paddingLeft="10dp"
+  	android:paddingRight="10dp">
+  	
+
+		<TextView
+			android:id="@+id/two_hund_m_1_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/two_hundred_Time"
+			android:gravity="left"
+			android:layout_weight="1"/>
+			
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/two_hundred_Label"
+			android:layout_weight="1"
+			android:gravity="center"/>
+		
+		<TextView
+			android:id="@+id/two_hund_m_2_time"	
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/two_hundred_Time"
+			android:layout_weight="1"
+			android:gravity="right"/>	
+    	
+  </LinearLayout>
+
+  <!-- 250m Distances -->
+  <LinearLayout
+  	android:orientation="horizontal"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:paddingLeft="10dp"
+  	android:paddingRight="10dp">
+  	
+
+		<TextView
+			android:id="@+id/two_fifty_m_1_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/two_fifty_m_Time"
+			android:gravity="left"
+			android:layout_weight="1"/>
+			
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/two_fifty_Label"
+			android:layout_weight="1"
+			android:gravity="center"/>
+		
+		<TextView
+			android:id="@+id/two_fifty_m_2_time"	
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/two_fifty_m_Time"
+			android:layout_weight="1"
+			android:gravity="right"/>	
+    	
+  </LinearLayout>
+
+  <!-- 333m Distances -->
+  <LinearLayout
+  	android:orientation="horizontal"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:paddingLeft="10dp"
+  	android:paddingRight="10dp">
+  	
+
+		<TextView
+			android:id="@+id/Three_thirdy_three_m_1_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/three_thirdy_three_m_Time"
+			android:gravity="left"
+			android:layout_weight="1"/>
+			
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/three_thirdy_three_m_Label"
+			android:layout_weight="1"
+			android:gravity="center"/>
+		
+		<TextView
+			android:id="@+id/Three_thirdy_three_m_2_time"	
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/three_thirdy_three_m_Time"
+			android:layout_weight="1"
+			android:gravity="right"/>	
+    	
+  </LinearLayout>
+
+  <!-- 400m Distances -->
+  <LinearLayout
+  	android:orientation="horizontal"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:paddingLeft="10dp"
+  	android:paddingRight="10dp">
+  	
+
+		<TextView
+			android:id="@+id/four_hundred_m_1_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/four_hundred_m_Time"
+			android:gravity="left"
+			android:layout_weight="1"/>
+			
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/four_hundred_m_Label"
+			android:layout_weight="1"
+			android:gravity="center"/>
+		
+		<TextView
+			android:id="@+id/four_hundred_m_2_time"	
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/four_hundred_m_Time"
+			android:layout_weight="1"
+			android:gravity="right"/>	
+    	
+  </LinearLayout>
+
+  <!-- 500m Distances -->
+  <LinearLayout
+  	android:orientation="horizontal"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:paddingLeft="10dp"
+  	android:paddingRight="10dp">
+  	
+
+		<TextView
+			android:id="@+id/five_hundred_m_1_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/five_hundred_m_Time"
+			android:gravity="left"
+			android:layout_weight="1"/>
+			
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/five_hundred_m_Label"
+			android:layout_weight="1"
+			android:gravity="center"/>
+		
+		<TextView
+			android:id="@+id/five_hundred_m_2_time"	
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/five_hundred_m_Time"
+			android:layout_weight="1"
+			android:gravity="right"/>	
+    	
+  </LinearLayout>
+  
+  <!-- 1000m Distances -->
+  <LinearLayout
+  	android:orientation="horizontal"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:paddingLeft="10dp"
+  	android:paddingRight="10dp">
+  	
+
+		<TextView
+			android:id="@+id/one_k_1_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/one_k_Time"
+			android:gravity="left"
+			android:layout_weight="1"/>
+			
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/one_k_Label"
+			android:layout_weight="1"
+			android:gravity="center"/>
+		
+		<TextView
+			android:id="@+id/one_k_2_time"	
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/one_k_Time"
+			android:layout_weight="1"
+			android:gravity="right"/>	
+    	
+  </LinearLayout>  
 </LinearLayout>

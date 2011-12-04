@@ -1,6 +1,9 @@
 package com.TrackApp;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.SeekBar;
@@ -46,6 +49,49 @@ public class GearComparisonActivity extends Activity{
 		final TextView gearinch2 = (TextView)findViewById(R.id.GearInchTwo);
 		final TextView rollout1 = (TextView)findViewById(R.id.Rollout_one);
 		final TextView rollout2 = (TextView)findViewById(R.id.Rollout_two);
+		final TextView speed1 = (TextView)findViewById(R.id.Speed_1);
+		final TextView speed2 = (TextView)findViewById(R.id.Speed_2);
+		
+		//Distance Times
+		final List<TextView> Time_TextViews_1 = new ArrayList<TextView>();
+		final List<TextView> Time_TextViews_2 = new ArrayList<TextView>();
+		final List<Integer> Distance = new ArrayList<Integer>();
+		
+		final TextView twohm1 = (TextView)findViewById(R.id.two_hund_m_1_time);
+		final TextView twohm2 = (TextView)findViewById(R.id.two_hund_m_2_time);
+		Time_TextViews_1.add(twohm1);
+		Time_TextViews_2.add(twohm2);
+		Distance.add(200);
+		
+		final TextView twofifty1 = (TextView)findViewById(R.id.two_fifty_m_1_time);
+		final TextView twofifty2 = (TextView)findViewById(R.id.two_fifty_m_2_time);
+		Time_TextViews_1.add(twofifty1);
+		Time_TextViews_2.add(twofifty2);
+		Distance.add(250);
+		
+		final TextView TTT1 = (TextView)findViewById(R.id.Three_thirdy_three_m_1_time);
+		final TextView TTT2 = (TextView)findViewById(R.id.Three_thirdy_three_m_2_time);
+		Time_TextViews_1.add(TTT1);
+		Time_TextViews_2.add(TTT2);
+		Distance.add(333);
+		
+		final TextView fourhm1 = (TextView)findViewById(R.id.four_hundred_m_1_time);
+		final TextView fourhm2 = (TextView)findViewById(R.id.four_hundred_m_2_time);
+		Time_TextViews_1.add(fourhm1);
+		Time_TextViews_2.add(fourhm2);
+		Distance.add(400);
+		
+		final TextView fivehm1 = (TextView)findViewById(R.id.five_hundred_m_1_time);
+		final TextView fivehm2 = (TextView)findViewById(R.id.five_hundred_m_2_time);
+		Time_TextViews_1.add(fivehm1);
+		Time_TextViews_2.add(fivehm2);
+		Distance.add(500);
+		
+		final TextView onek1 = (TextView)findViewById(R.id.one_k_1_time);
+		final TextView onek2 = (TextView)findViewById(R.id.one_k_2_time);
+		Time_TextViews_1.add(onek1);
+		Time_TextViews_2.add(onek2);
+		Distance.add(1000);
 
 		//Listener for change to Front Ring Selector
 		frontRing1.setOnChangeListener(new NumberPicker.OnChangedListener() {
@@ -61,15 +107,15 @@ public class GearComparisonActivity extends Activity{
 				//Change Rollout
 				x = (CharSequence)((Double)from_Front.getDistanceTraveled()).toString();
 				rollout1.setText(x);
-/*				
+			
 				//Change Speed
-				double KPH_speed = from_Front.KPH_Speed(cadence_select.getProgress());
-				x  =(CharSequence)((Double)KPH_speed).toString();
-				speed.setText(x);
+				double speed = from_Front.KPH_Speed(cadence.getProgress());
+				x  =(CharSequence)((Double)speed).toString();
+				speed1.setText(x);
 				
 				//Update Times
-				Update_Times(Time_TextViews, Distance, from_Front, cadence_select.getProgress());
-*/
+				Update_Times(Time_TextViews_1, Distance, from_Front, cadence.getProgress());
+
 			}
 		});
 				
@@ -87,15 +133,16 @@ public class GearComparisonActivity extends Activity{
 				//Change Rollout
 				x = (CharSequence)((Double)from_Rear.getDistanceTraveled()).toString();
 				rollout1.setText(x);
-				/*
+	
 				//Change Speed
-				double KPH_speed = from_Rear.KPH_Speed(cadence_select.getProgress());
-				x  =(CharSequence)((Double)KPH_speed).toString();
-				speed.setText(x);
+				double speed = from_Rear.KPH_Speed(cadence.getProgress());
+				x  =(CharSequence)((Double)speed).toString();
+				speed1.setText(x);
+				
 				
 				//Update Distance Times
-				Update_Times(Time_TextViews, Distance, from_Rear, cadence_select.getProgress());
-				*/
+				Update_Times(Time_TextViews_1, Distance, from_Rear, cadence.getProgress());
+				
 			}
 		});		
 		
@@ -112,15 +159,16 @@ public class GearComparisonActivity extends Activity{
 				//Change Rollout
 				x = (CharSequence)((Double)from_Front.getDistanceTraveled()).toString();
 				rollout2.setText(x);
-				/*
+				
 				//Change Speed
-				double KPH_speed = from_Front.KPH_Speed(cadence_select.getProgress());
-				x  =(CharSequence)((Double)KPH_speed).toString();
-				speed.setText(x);
+				double speed = from_Front.KPH_Speed(cadence.getProgress());
+				x  =(CharSequence)((Double)speed).toString();
+				speed2.setText(x);
+				
 				
 				//Update Times
-				Update_Times(Time_TextViews, Distance, from_Front, cadence_select.getProgress());
-				*/
+				Update_Times(Time_TextViews_2, Distance, from_Front, cadence.getProgress());
+				
 			}
 		});
 				
@@ -138,25 +186,31 @@ public class GearComparisonActivity extends Activity{
 				//Change Rollout
 				x = (CharSequence)((Double)from_Rear.getDistanceTraveled()).toString();
 				rollout2.setText(x);
-				/*
+				
 				//Change Speed
-				double KPH_speed = from_Rear.KPH_Speed(cadence_select.getProgress());
-				x  =(CharSequence)((Double)KPH_speed).toString();
-				speed.setText(x);
+				double speed = from_Rear.KPH_Speed(cadence.getProgress());
+				x  =(CharSequence)((Double)speed).toString();
+				speed2.setText(x);
+				
 				
 				//Update Distance Times
-				Update_Times(Time_TextViews, Distance, from_Rear, cadence_select.getProgress());
-				*/
+				Update_Times(Time_TextViews_2, Distance, from_Rear, cadence.getProgress());
+				
 			}
 		});	
 		
 		cadence.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			
 			public void onStopTrackingTouch(SeekBar seekBar) {
-				Gear_Inch_Calc gear_1 = new Gear_Inch_Calc(frontRing1.getCurrent(), rearCog1.getCurrent());
+				Gear_Inch_Calc gear_1 = new Gear_Inch_Calc(frontRing1.getCurrent(),rearCog1.getCurrent());
 				Gear_Inch_Calc gear_2 = new Gear_Inch_Calc(frontRing2.getCurrent(), rearCog2.getCurrent());
 				CharSequence speed_1 = (CharSequence)((Double)gear_1.KPH_Speed(seekBar.getProgress())).toString();
 				CharSequence speed_2 = (CharSequence)((Double)gear_2.KPH_Speed(seekBar.getProgress())).toString();
+				speed1.setText(speed_1);
+				speed2.setText(speed_2);
+				
+				Update_Times(Time_TextViews_1, Distance, gear_1, cadence.getProgress());
+				Update_Times(Time_TextViews_2, Distance, gear_2, cadence.getProgress());
 				
 				
 			}
@@ -172,6 +226,17 @@ public class GearComparisonActivity extends Activity{
 				cadence_label.setText(x);
 			}
 		});
+	}
+	
+	//Abstraction to update times
+	private void Update_Times(List<TextView> views, List<Integer> Distances, Gear_Inch_Calc gear, int cadence)
+	{
+		for(int i=0; i<views.size(); i++)
+		{
+			views.get(i).setText((CharSequence) gear.Pretty_Print(
+					gear.Time_To_Complete(cadence, Distances.get(i))));
+		}
+
 	}
 	
 }
