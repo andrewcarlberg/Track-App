@@ -1,7 +1,5 @@
 package com.TrackApp;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -38,13 +36,14 @@ public class GearComparisonActivity extends Activity{
 		rearCog2.setCurrent(14);	
 		
 		//Cadence
-		final SeekBar cadence= (SeekBar)findViewById(R.id.CadenceBar);
+		final SeekBar cadence= (SeekBar)findViewById(R.id.GCCadenceBar);
 		cadence.setMax(200);
 		cadence.setProgress(90);
 		
 		//TextViews
 		final TextView cadence_label = (TextView)findViewById(R.id.Cadence);
-		
+		final TextView gearinch1 = (TextView)findViewById(R.id.GearInchOne);
+		final TextView gearinch2 = (TextView)findViewById(R.id.GearInchTwo);
 		final TextView rollout1 = (TextView)findViewById(R.id.Rollout_one);
 		final TextView rollout2 = (TextView)findViewById(R.id.Rollout_two);
 
@@ -57,7 +56,7 @@ public class GearComparisonActivity extends Activity{
 				CharSequence x;
 				Double y= from_Front.getGearInches();
 				x = (CharSequence) y.toString();
-				//Gear_inches.setText(x);
+				gearinch1.setText(x);
 				
 				//Change Rollout
 				x = (CharSequence)((Double)from_Front.getDistanceTraveled()).toString();
@@ -83,7 +82,7 @@ public class GearComparisonActivity extends Activity{
 				CharSequence x;
 				Double y= from_Rear.getGearInches();
 				x = (CharSequence) y.toString();
-				//Gear_inches.setText(x);
+				gearinch1.setText(x);
 				
 				//Change Rollout
 				x = (CharSequence)((Double)from_Rear.getDistanceTraveled()).toString();
@@ -108,7 +107,7 @@ public class GearComparisonActivity extends Activity{
 				CharSequence x;
 				Double y= from_Front.getGearInches();
 				x = (CharSequence) y.toString();
-				//Gear_inches.setText(x);
+				gearinch2.setText(x);
 				
 				//Change Rollout
 				x = (CharSequence)((Double)from_Front.getDistanceTraveled()).toString();
@@ -134,7 +133,7 @@ public class GearComparisonActivity extends Activity{
 				CharSequence x;
 				Double y= from_Rear.getGearInches();
 				x = (CharSequence) y.toString();
-				//Gear_inches.setText(x);
+				gearinch2.setText(x);
 				
 				//Change Rollout
 				x = (CharSequence)((Double)from_Rear.getDistanceTraveled()).toString();
@@ -150,6 +149,7 @@ public class GearComparisonActivity extends Activity{
 				*/
 			}
 		});	
+		
 		cadence.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			
 			public void onStopTrackingTouch(SeekBar seekBar) {
@@ -164,9 +164,8 @@ public class GearComparisonActivity extends Activity{
 			
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
-				CharSequence x = (CharSequence)((Integer)progress).toString();
+				CharSequence x = ((Integer)progress).toString();
 				cadence_label.setText(x);
-				
 			}
 		});
 	}

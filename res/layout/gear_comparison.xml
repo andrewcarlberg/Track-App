@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:padding="10dp">
 
    <!-- Number Pickers -->
   <LinearLayout
       android:orientation="horizontal"
       android:layout_width="fill_parent"
-      android:layout_height="250dp"
+      android:layout_height="wrap_content"
       android:layout_weight="1"
       android:layout_gravity="center">
 
@@ -62,10 +62,11 @@
 	
   </LinearLayout>
         
+  <!-- Gear Inch Views -->
   <LinearLayout
     android:orientation="horizontal"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:layout_weight="1">
     <TextView
         android:id="@+id/GearInchOneLabel"
@@ -100,27 +101,28 @@
     
   </LinearLayout>
 
+  <!-- Rollout TexViews -->
   <LinearLayout
     android:orientation="horizontal"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:layout_weight="1">
     <TextView
         android:id="@+id/RolloutoneLabel"
-        android:text="@string/GearInchLabel"
+        android:text="@string/Rollout_Label"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
     <TextView
         android:id="@+id/Rollout_one"
-        android:text="@string/Gear_Inch_Default"
+        android:text="@string/rollout_distance"
         android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_weight="1.5"/>
     <TextView
         android:id="@+id/RolloutTwoLabel"
-        android:text="@string/GearInchLabel"
+        android:text="@string/Rollout_Label"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -128,11 +130,47 @@
         android:layout_gravity="right"/>
     <TextView
         android:id="@+id/Rollout_two"
-        android:text="@string/Gear_Inch_Default"
+        android:text="@string/rollout_distance"
         android:paddingLeft="5dp"
         android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:layout_weight="1.5"
         android:layout_gravity="right"/>
   </LinearLayout>
+  
+  <!-- Cadence TextView -->
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:padding="5dp">
+	<TextView
+		android:id="@+id/Cadencelabel"
+	    android:text="@string/CadenceLabel"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:paddingRight="5dp"
+    	android:layout_gravity="right"/>
+	<TextView android:id="@+id/Cadence" 
+		android:text="@string/Cadence_Default"
+		android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity=""/> 
+  </LinearLayout>
+  
+  <!-- Cadence Bar -->
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+	<SeekBar android:layout_width="fill_parent" 
+		android:id="@+id/GCCadenceBar" 
+		android:layout_height="wrap_content" 
+		android:padding="5dp"/>
+  </LinearLayout>
+
+  
+
 </LinearLayout>

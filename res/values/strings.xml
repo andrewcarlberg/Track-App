@@ -11,7 +11,7 @@
     <string name="Timer">Timer</string>
     <string name="X">X</string>
     <string name="GearInchLabel">Gear Inches: </string>
-    <string name="Gear_Inch_Default">92.5</string>
+    <string name="Gear_Inch_Default">92.57</string>
     <string name="CadenceLabel">Cadence: </string>
     <string name="Cadence_Default">90</string>
     <string name="Rollout_Label">Rollout:</string>
