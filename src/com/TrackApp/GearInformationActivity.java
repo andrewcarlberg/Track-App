@@ -126,7 +126,14 @@ public class GearInformationActivity extends Activity{
 		cadence_select.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			//Unused function
 			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
+				Gear_Inch_Calc gear = new Gear_Inch_Calc(frontRing.getCurrent(),rearCog.getCurrent());
+				//Change Speed
+				CharSequence x = (CharSequence)((Double)gear.KPH_Speed(seekBar.getProgress())).toString();
+				speed.setText(x);
+				
+				//Update Times
+				Update_Times(Time_TextViews, Distance, gear, seekBar.getProgress());
+				
 				
 			}
 			//Unused Function
@@ -138,16 +145,10 @@ public class GearInformationActivity extends Activity{
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
 				//change Cadence label
-				Gear_Inch_Calc gear = new Gear_Inch_Calc(frontRing.getCurrent(),rearCog.getCurrent());
+				
 				CharSequence x = (CharSequence)((Integer)progress).toString();
 				cadence.setText(x);
 				
-				//Change Speed
-				x = (CharSequence)((Double)gear.KPH_Speed(progress)).toString();
-				speed.setText(x);
-				
-				//Update Times
-				Update_Times(Time_TextViews, Distance, gear, progress);
 				
 			}
 		});

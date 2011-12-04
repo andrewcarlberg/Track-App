@@ -153,7 +153,11 @@ public class GearComparisonActivity extends Activity{
 		cadence.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			
 			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
+				Gear_Inch_Calc gear_1 = new Gear_Inch_Calc(frontRing1.getCurrent(), rearCog1.getCurrent());
+				Gear_Inch_Calc gear_2 = new Gear_Inch_Calc(frontRing2.getCurrent(), rearCog2.getCurrent());
+				CharSequence speed_1 = (CharSequence)((Double)gear_1.KPH_Speed(seekBar.getProgress())).toString();
+				CharSequence speed_2 = (CharSequence)((Double)gear_2.KPH_Speed(seekBar.getProgress())).toString();
+				
 				
 			}
 			
