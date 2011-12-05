@@ -77,15 +77,26 @@ public class Gear_Inch_Calc{
 		if((int)time_in_seconds/60>0)
 		{
 			int minutes = (int)time_in_seconds/60;
-			Time = ((Integer)minutes).toString();
+			if(minutes>9)
+			{
+				Time = ((Integer)minutes).toString();
+			}
+			else
+			{
+				Time = "0"+((Integer)minutes).toString();
+			}
 			time_in_seconds = round(time_in_seconds - minutes*60,2);
 		}
 		else
 			Time="00";
+		
 		if (time_in_seconds <10)
 			Time = Time +":0"+((Double)time_in_seconds).toString();
 		else
 			Time = Time +":"+((Double)time_in_seconds).toString();
+		
+		if(Time.length()==7)
+			Time+="0";
 		
 		return Time;
 		

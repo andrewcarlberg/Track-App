@@ -37,10 +37,10 @@
 	<string name="three_thirdy_three_m_Time">00:30.05</string>
 	<string name="four_hundred_m_Time">00:36.10</string>
 	<string name="five_hundred_m_Time">00:45.13</string>
-	<string name="one_k_Time">1:30.26</string>
-	<string name="two_k_Time">3:00.52</string>
-	<string name="three_k_Time">4:30.78</string>
-	<string name="four_k_Time">6:01.04</string>
+	<string name="one_k_Time">01:30.26</string>
+	<string name="two_k_Time">03:00.52</string>
+	<string name="three_k_Time">04:30.78</string>
+	<string name="four_k_Time">06:01.04</string>
 	<string name="vs">vs</string>
 	<string name="rollout_one_distance">7.38</string>
     <string name="rollout_two_distance">7.38</string>
