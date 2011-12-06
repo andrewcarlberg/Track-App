@@ -203,13 +203,13 @@ public class GearComparisonActivity extends Activity{
 			
 			public void onStopTrackingTouch(SeekBar seekBar) {
 				Gear_Inch_Calc gear_1 = new Gear_Inch_Calc(frontRing1.getCurrent(),rearCog1.getCurrent());
-				CharSequence speed_1 = (CharSequence)((Double)gear_1.KPH_Speed(seekBar.getProgress())).toString();
-				speed1.setText(speed_1);
+				CharSequence speed = (CharSequence)((Double)gear_1.KPH_Speed(seekBar.getProgress())).toString();
+				speed1.setText(speed);
 				Update_Times(Time_TextViews_1, Distance, gear_1, cadence.getProgress());
 				
 				Gear_Inch_Calc gear_2 = new Gear_Inch_Calc(frontRing2.getCurrent(), rearCog2.getCurrent());
-				CharSequence speed_2 = (CharSequence)((Double)gear_2.KPH_Speed(seekBar.getProgress())).toString();
-				speed2.setText(speed_2);
+				speed = (CharSequence)((Double)gear_2.KPH_Speed(seekBar.getProgress())).toString();
+				speed2.setText(speed);
 				Update_Times(Time_TextViews_2, Distance, gear_2, cadence.getProgress());
 			}
 			
