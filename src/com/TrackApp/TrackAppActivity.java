@@ -15,6 +15,7 @@ public class TrackAppActivity extends Activity {
         setContentView(R.layout.main);
         ImageButton gearinfoButton = (ImageButton)findViewById(R.id.Gear_Info_Button);
         ImageButton gearcomparisonButton = (ImageButton)findViewById(R.id.Gear_Comparison_Button);
+        ImageButton pursuitgenerator = (ImageButton)findViewById(R.id.Scheduler_Builder_Button);
         gearinfoButton.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
@@ -34,6 +35,17 @@ public class TrackAppActivity extends Activity {
 						GearComparisonActivity.class
 						);
 				startActivity(intent);
+			}
+		});
+        pursuitgenerator.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent intent = new Intent(
+						TrackAppActivity.this,
+						PursuitGeneratorActivity.class
+						);
+				startActivity(intent);
+				
 			}
 		});
     }

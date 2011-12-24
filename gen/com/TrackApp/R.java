@@ -123,6 +123,7 @@ public final class R {
         public static final int main=0x7f030002;
         public static final int number_picker=0x7f030003;
         public static final int number_picker_pref=0x7f030004;
+        public static final int pursuit_generator=0x7f030005;
     }
     public static final class string {
         public static final int CadenceLabel=0x7f05000b;

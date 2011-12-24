@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".GearInformationActivity"/>
         <activity android:name=".GearComparisonActivity"/>
+        <activity android:name=".PursuitGeneratorActivity"/>
 
     </application>
 
